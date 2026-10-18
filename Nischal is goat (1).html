@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nischal is goat</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg-from: #171717;
+    --fg-to: #404040;
+    --glow: rgba(36, 122, 251, 0.6);
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #000000;
+      --fg-from: #737373;
+      --fg-to: #ffffff;
+      --glow: rgba(120, 190, 255, 0.75);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #000000;
+    --fg-from: #737373;
+    --fg-to: #ffffff;
+    --glow: rgba(120, 190, 255, 0.75);
+    color-scheme: dark;
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  html, body { height: 100%; margin: 0; }
+  body {
+    background: var(--bg);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    overflow: hidden;
+  }
+
+  .lines {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--bg);
+  }
+  .lines svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    animation: fade 1s ease-out both;
+  }
+  .lines path {
+    fill: none;
+    stroke-width: 2.3;
+    stroke-linecap: round;
+    stroke-dasharray: 50 800;
+    stroke-dashoffset: 800;
+    opacity: 0;
+    animation: run var(--t, 14s) linear var(--d, 0s) infinite;
+  }
+  @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes run {
+    0%   { stroke-dashoffset: 800; stroke-dasharray: 50 800; opacity: 0; }
+    25%  { opacity: 1; }
+    50%  { opacity: 1; }
+    70%, 100% { stroke-dashoffset: 0; stroke-dasharray: 20 800; opacity: 0; }
+  }
+
+  h1 {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content;
+    max-width: 88%;
+    margin: 0;
+    text-align: center;
+    font-size: clamp(2rem, 8vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    background: linear-gradient(to bottom, var(--fg-from), var(--fg-to));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 0 10px var(--glow)) drop-shadow(0 0 32px var(--glow));
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .lines path { animation: none; stroke-dasharray: none; stroke-dashoffset: 0; opacity: 0.35; }
+    .lines svg { animation: none; }
+  }
+</style>
+</head>
+<body>
+<main class="lines">
+  <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <path stroke="#46A5CA" style="--d:-1s;--t:13s" d="M720 450C720 450 742 440 755 426C768 411 779 419 789 401C800 384 817 389 827 380C836 372 852 365 863 356C874 348 878 343 899 333C920 324 924 320 935 310C946 300 961 301 971 288C980 275 994 273 1005 263C1016 253 1026 251 1038 242C1050 233 1065 230 1075 216"/>
+    <path stroke="#4FAE4D" style="--d:-6s;--t:15s" d="M720 450C720 450 712 438 690 407C668 377 673 394 666 366C659 337 648 347 637 323C626 299 627 304 610 281C593 258 599 255 582 243C566 230 566 218 559 197C552 177 549 172 529 157C509 141 522 134 505 116"/>
+    <path stroke="#D6590C" style="--d:-3s;--t:12s" d="M720 450C720 450 739 449 790 447C841 445 816 441 862 437C907 433 886 437 931 437C975 436 951 432 1002 426C1052 419 1021 425 1073 424C1125 423 1114 420 1140 414C1166 409 1173 412 1215 411C1256 410 1243 406 1286 402"/>
+    <path stroke="#247AFB" style="--d:-9s;--t:16s" d="M720 450C720 450 696 459 682 473C668 487 673 487 648 493C623 498 637 500 609 513C581 526 597 528 572 534C547 539 552 549 537 557C522 565 516 563 498 575C480 587 484 590 461 599C438 607 443 605 424 618"/>
+    <path stroke="#A534A0" style="--d:-4s;--t:14s" d="M720 450C720 450 765 459 789 476C813 493 826 487 865 496C905 504 908 510 944 524C979 537 963 535 1010 547C1056 560 1062 556 1090 569C1117 582 1134 583 1159 593C1184 603 1183 603 1233 615"/>
+    <path stroke="#A8A438" style="--d:-8s;--t:13s" d="M720 450C720 450 728 431 734 379C741 328 743 359 758 310C773 260 762 271 773 244C784 218 777 201 787 176C797 151 797 144 809 107C820 70 812 88 819 37"/>
+    <path stroke="#D6590C" style="--d:-2s;--t:17s" d="M720 450C720 450 722 499 726 520C730 542 731 550 739 589C747 628 744 639 746 660C749 680 754 694 757 732C760 771 760 765 764 805C767 845 770 822 773 868C777 915 776 901 778 940"/>
+    <path stroke="#46A29C" style="--d:-11s;--t:15s" d="M720 450C720 450 687 455 670 468C654 480 653 477 627 485C600 493 600 495 578 504C556 512 556 507 534 517C512 527 506 526 486 539C467 552 461 546 439 554C417 561 407 568 389 573"/>
+    <path stroke="#D7C200" style="--d:-5s;--t:12s" d="M720 450C720 450 744 465 755 491C766 516 781 501 791 525C802 549 808 538 829 565C850 591 852 583 865 602C878 621 875 622 902 644C930 666 922 656 938 682"/>
+    <path stroke="#59BBEB" style="--d:-7s;--t:16s" d="M720 450C720 450 718 413 716 397C714 382 714 362 711 345C708 327 708 322 702 292C695 262 700 271 695 241C690 211 693 217 690 185C686 153 686 149 683 134"/>
+    <path stroke="#9F39A5" style="--d:-10s;--t:14s" d="M720 450C720 450 699 437 670 425C641 413 635 411 616 403C596 395 595 395 569 378C542 361 547 360 514 349C481 338 480 335 468 330"/>
+  </svg>
+  <h1>Nischal is goat</h1>
+</main>
+</body>
+</html>
